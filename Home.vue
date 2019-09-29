@@ -44,8 +44,8 @@ export default {
           // Sort alphabetical by location
           // BUG: lowercase items go to bottom of list
           .sort(function(a, b) {
-            if (a.value < b.value) { return -1 }
-            if (a.value > b.value) { return 1 }
+             if (a.value.toUpperCase() < b.value.toUpperCase()) { return -1 }
+             if (a.value.toUpperCase() > b.value.toUpperCase()) { return 1 }
             return 0
           })
           // Return unique values (must do after sort, refactor if performance issue)
